@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './PopupForm.css';
 
 const PopupForm = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate(); // استخدم useNavigate للتوجيه
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 1000);
+    }, 10);
 
     return () => clearTimeout(timer);
   }, []);
@@ -27,19 +29,20 @@ const PopupForm = () => {
     const email = event.target.email.value;
 
     if (!validateName(name)) {
-      alert("يرجى إدخال الاسم بشكل صحيح.");
+      alert("Ange namnet korrekt");
       return;
     }
     if (!validatePhone(phone)) {
-      alert("يرجى إدخال رقم هاتف سويدي صحيح.");
+      alert("Ange ett giltigt svenskt telefonnummer.");
       return;
     }
     if (!validateEmail(email)) {
-      alert("يرجى إدخال بريد إلكتروني صحيح.");
+      alert("Ange en giltig e-postadress.");
       return;
     }
 
     // تنفيذ العمليات المطلوبة عند الإرسال
+    navigate('/Secpg'); // توجيه المستخدم إلى صفحة Secpg
   };
 
   return (
@@ -47,19 +50,22 @@ const PopupForm = () => {
       <div className="popup-overlay">
         <div className="popup-content">
           <button className="close-button" onClick={closePopup}>×</button>
+          <h1><strong>50% Rabatt:</strong></h1>
           <h2>Komplett Minirekond</h2>
+          <h3>Just Nu fr. 995:- (Ord. fr. 1.990:-)
+          ✅ Inklusive vaxning</h3>
           <form onSubmit={handleSubmit}>
             <label>
-              För- & Efternamn
-              <input type="text" name="name" required />
+            För- & Efternamn *
+              <input type="text" name="name" required placeholder='För- & Efternamn' />
             </label>
             <label>
-              Telefonnummer
-              <input type="tel" name="phone" required />
+              Telefonnummer *
+              <input type="tel" name="phone" required placeholder='Telefonnummer'/>
             </label>
             <label>
-              E-postadress
-              <input type="email" name="email" required />
+            Mejladress *
+              <input type="email" name="email" required placeholder='Mejladress'/>
             </label>
             <button type="submit" className="submit-button">Hämta Erbjudandet</button>
             <button type="button" className="close-button-large" onClick={closePopup}>Stäng och Fortsätt</button>

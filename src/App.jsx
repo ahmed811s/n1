@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
+import { Route, Routes, BrowserRouter} from 'react-router-dom';
 import PopupForm from "./components/pop/PopupForm";
 import Header from './components/1-Header/Header';
 import Hero from './components/2-Hero/Hero';
 import Main from './components/3-main/Main';
 import Contact from './components/4-Contact/Contact';
-import Footer from './components/5-Footer/Footer';
 import About from './components/About/About';
 import Last from './components/Last/AnimatedHeader';
+// import Secpg from './components/second-page/secpg';
+import Rooter from "./components/5-Footer/Footer";
 
 function App() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -32,15 +34,22 @@ function App() {
       <div className='divider' />
       <Contact />
       <div className='divider' />
-      <Footer />
-      <div className='divider' />
       <About />
       <div className='divider' />
       <Last />
-
+      <div className='divider' />
+      {/* <Secpg/> */}
+      <Rooter />
       {isPopupOpen && <PopupForm />} {/* هنا إضافة النافذة المنبثقة */}
     </div>
   );
+  return (
+    <BrowserRouter>
+    <Routes>
+      <Route path="./components/1-Header/Header.jsx" element={<Header />}/>
+    </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;

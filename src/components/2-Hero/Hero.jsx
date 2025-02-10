@@ -1,12 +1,19 @@
 import "./Hero.css";
+import { useState } from 'react';
+import PopUp from '../pop/PopupForm';
 
 const Hero = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowPopup(prevState => !prevState);
+  };
+
   return (
     <section className="hero-container">
       <div>
         <h1 className="hero-title">
           <strong>En exklusivare tvätt med vaxning som skyddar hela vintern!</strong>
-          
         </h1>
       </div>
 
@@ -18,22 +25,21 @@ const Hero = () => {
           <p>Inklusive en vaxning med ett hållbart skydd!</p>
         </div>
 
-        <ul className="hero-benefits">
-          <li>➤ Invändig rengöring: Få ett interiör som känns som nytt.</li>
-          <li>
-            ➤ Vaxning ger en djup och långvarig glans som ger din bil en snygg
-            finish.
-          </li>
-          <li>
-            ➤ Rengjorda fälgar ger din bil ett komplett och elegant utseende.
-          </li>
-          <li>
-            ➤ Ren körupplevelse: Upplev renhet och fräschör i varje körning.
-          </li>
-          <li>➤ Din bil är en investering, va rädd om den.</li>
-        </ul>
-
-        <button className="hero-button">Hämta Erbjudande</button>
+        <div className="hero-benefits">
+          <p> Invändig rengöring: Få ett interiör som känns som nytt.</p>
+          <p>
+             Vaxning ger en djup och långvarig glans som ger din bil en snygg finish.
+          </p>
+          <p>
+             Rengjorda fälgar ger din bil ett komplett och elegant utseende.
+          </p>
+          <p>
+             Ren körupplevelse: Upplev renhet och fräschör i varje körning.
+          </p>
+          <p> Din bil är en investering، va rädd om den.</p>
+        </div>
+        
+        <button className="hero-button" onClick={handleButtonClick}>Hämta Erbjudande</button>
 
         <div className="hero-logo">
           <img
@@ -43,6 +49,8 @@ const Hero = () => {
           />
         </div>
       </div>
+
+      {showPopup && <PopUp handleClosePopup={handleButtonClick} />} 
     </section>
   );
 };

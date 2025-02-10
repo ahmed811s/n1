@@ -1,99 +1,130 @@
 .about-section {
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(to bottom, #e6f2ff, #ffffff);
-    min-height: 100vh; /* التأكد من أن القسم يأخذ ارتفاع الشاشة بالكامل */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  text-align: center;
+  padding: 30px 4px;
+  background: linear-gradient(to bottom, #e6f2ff, #ffffff);
+  min-height: 100vh;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 2rem; /* حجم النص العنوان */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.quote-icon {
+  font-size: 40px;
   
-  h2 {
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
+  color: #00c6c6;
+  margin-bottom: 20px;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.testimonial-card {
+  width: 75%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between; /* وضع النصوص في الجهة الصحيحة */
+  align-items: center;
+  background: rgb(243, 245, 247);
+  padding: 40px;
+  border-radius: 22px;
+  border: 3px double #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.f {
+  display: block;
+  flex-direction: column; /* وضع الصورة على اليمين والنص على اليسار */
+  align-items: center;
   
-  .quote-icon {
-    font-size: 40px;
-    color: #00c6c6;
-    margin-bottom: 20px;
-  }
-  
-  .testimonials-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-  }
-  
-  .testimonial-card {
-    width: 80%;
-    max-width: 600px;
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    border: 2px dashed #ccc;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-  }
-  
-  .testimonial-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  h3 {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .source-icon {
-    height: 20px;
-  }
-  
-  .testimonial-card p {
-    font-size: 16px;
-    color: #333;
-    margin-top: 8px;
-  }
-  
-  /* إصلاح مشكلة الزر */
-  .button-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px; /* التأكد من وجود مسافة كافية بين التقييمات والزر */
-  }
-  
-  .cta-button {
-    background: linear-gradient(135deg, #00c6c6, #008b8b);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0, 198, 198, 0.4);
-    display: inline-block;
-    min-width: 250px; /* ضبط عرض الزر */
-  }
-  
-  .cta-button span {
-    font-size: 14px;
-    font-weight: normal;
-    margin-left: 8px;
-    opacity: 0.8;
-    display: block;
-  }
-  
-  .cta-button:hover {
-    transform: translateY(-3px);
-    background: linear-gradient(135deg, #008b8b, #005f5f);
-  }
-  
+}
+
+.f img {
+  width: 130 px; /* حجم الصورة */
+  height: 60px;
+  border-radius: 0%; /* منحنيات حول الصورة */
+  margin: 10px; /* مسافة بين الصورة والنص */
+  padding: 0;
+}
+
+h3 {
+  font-size: 1.3rem; /* حجم النص للاسم */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* مسافة بين الاسم والنص */
+}
+
+.testimonial-card p {
+  font-size: 1rem; /* حجم نص الفقرات */
+  color: #333;
+  margin-top: 4px;
+  flex-grow: 1;
+}
+
+.button {
+  background: #2ee6c4;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+  width: auto; /* ضبط عرض الزر */
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #00c6c6, #008b8b);
+  color: white;
+  font-size: 1.2rem; /* حجم النص داخل الزر */
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 198, 198, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+}
+
+.cta-button span {
+  font-size: 1rem; /* حجم النص في الجزء السفلي من الزر */
+  font-weight: normal;
+  margin-left: 8px;
+  opacity: 0.8;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #008b8b, #005f5f);
+}
