@@ -1,0 +1,45 @@
+/* secpg.css */
+
+.ramnaslatt-page {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #002663;
+    text-align: center;
+  }
+  
+  .header-section {
+    background-image: url("https://pplx-res.cloudinary.com/image/upload/v1739279490/user_uploads/uKivdNZnIPCKJcJ/second.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .thank-you-text {
+    font-size: 2em;
+    margin: 20px 0;
+  }
+  
+  .booking-info {
+    font-size: 1.2em;
+  }
+  
+  .map-section {
+    padding: 20px;
+  }
+  
+  .map-image {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .copyright-section {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+  }
+  

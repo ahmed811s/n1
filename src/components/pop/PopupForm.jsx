@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './PopupForm.css';
 
+
 const PopupForm = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate(); // استخدم useNavigate للتوجيه
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -41,8 +42,8 @@ const PopupForm = () => {
       return;
     }
 
-    // تنفيذ العمليات المطلوبة عند الإرسال
-    navigate('/Secpg'); // توجيه المستخدم إلى صفحة Secpg
+    navigate('/secpg'); // توجيه إلى صفحة Secpg
+    closePopup();
   };
 
   return (

@@ -1,15 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-
 import App from './App';
+import Secpg from './components/second-page/secpg';
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+  // <React.StrictMode>
+  //   <BrowserRouter>
+  //     <Routes>
+  //       <Route path="/" element={<App />} />
+  //       <Route path="/secpg" element={<Secpg />} />
+  //     </Routes>
+  //   </BrowserRouter>
+  // </React.StrictMode>
   <BrowserRouter>
-    <Switch> 
-    <Route path='/' exact Component={Secpg}/>
-    </Switch> 
+    <Routes>
+      <Route path='/'  element={<App />}/>
+      <Route path='./secpg' element={<Secpg />}/>
+    </Routes>
   </BrowserRouter>
-  document.getElementById('root')
+
 );

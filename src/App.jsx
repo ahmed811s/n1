@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
-import { Route, Routes, BrowserRouter} from 'react-router-dom';
-import PopupForm from "./components/pop/PopupForm";
+import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';import PopupForm from "./components/pop/PopupForm";
 import Header from './components/1-Header/Header';
 import Hero from './components/2-Hero/Hero';
 import Main from './components/3-main/Main';
 import Contact from './components/4-Contact/Contact';
 import About from './components/About/About';
 import Last from './components/Last/AnimatedHeader';
-// import Secpg from './components/second-page/secpg';
+import Secpg from './components/second-page/secpg';
 import Rooter from "./components/5-Footer/Footer";
 
 function App() {
@@ -19,7 +18,7 @@ function App() {
     const timer = setTimeout(() => {
       setIsPopupOpen(true);
       console.log("✅ النافذة المنبثقة مفتوحة الآن!");
-    }, 5000); // 5000 ميلي ثانية تعادل 5 ثواني
+    }, 100); // 5000 ميلي ثانية تعادل 5 ثواني
 
     return () => clearTimeout(timer);
   }, []);
@@ -38,18 +37,13 @@ function App() {
       <div className='divider' />
       <Last />
       <div className='divider' />
-      {/* <Secpg/> */}
       <Rooter />
-      {isPopupOpen && <PopupForm />} {/* هنا إضافة النافذة المنبثقة */}
+      
+      
+      {isPopupOpen && <PopupForm />} 
     </div>
   );
-  return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="./components/1-Header/Header.jsx" element={<Header />}/>
-    </Routes>
-    </BrowserRouter>
-  )
+  
 }
 
 export default App;
