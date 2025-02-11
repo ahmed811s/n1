@@ -1,12 +1,12 @@
 import React from "react";
 import "./Main.css";
-
+import p2 from './p2.webp';
 const Main = () => {
   return (
     <div className="main-container">
       <div className="content-wrapper">
         <div className="image-containser">
-          <img src="/public/p2.webp" alt="Luxury Car" loading="lazy" />
+          <img src={p2} alt="Luxury Car" loading="lazy" />
         </div>
         <div className="text-container">
           <h3 className="text-container h3">

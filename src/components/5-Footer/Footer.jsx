@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
-
+import lc from './lc.svg';
+import gbs from './gbs.webp';
 function Footer() {
   return (
     <div>
@@ -8,7 +9,7 @@ function Footer() {
         <div></div>
         <div className="H">
             <img
-              src="/public/location-dot-solid.svg"
+              src={lc}
               alt="Företagslogotyp"
               className="loc"
               loading="lazy"
@@ -24,7 +25,7 @@ function Footer() {
 
         <div>
           <a href="">
-            <img src="/public/gbs.webp" className="gb" />
+            <img src={gbs} className="gb" />
           </a>
         </div>
       </div>

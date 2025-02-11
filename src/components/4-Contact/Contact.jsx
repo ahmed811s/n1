@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from 'react';
 import PopUp from '../pop/PopupForm';
 import "./Contact.css";
-
+import b2 from './b2.webp';
 const Contact = () => {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -59,7 +59,7 @@ const Contact = () => {
         <div>
           <div className="image">
         <img
-          src="/public/2.webp"
+          src= {b2}
           alt="Bilvård"
           className="car-image"
           loading="lazy"

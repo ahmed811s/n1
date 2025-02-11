@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PopUp from "../pop/PopupForm";
-
+import p11 from './p11.webp';
+import ere from './ere.webp';
 const Promo = () => {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -11,13 +12,13 @@ const Promo = () => {
   return (
     <div className="promo-container">
       <div className="promo-left">
-        <img src="/public/ere.webp" alt="Car icon" className="car-icon" loading="lazy" />
+        <img src={ere} alt="Car icon" className="car-icon" loading="lazy" />
         <button className="offer-button pulse-effect" onClick={handleButtonClick}>
           <div>Hämta Erbjudande</div>
           <div className="price-text">Just Nu fr. 995:- (Ord. fr. 1.990:-)</div>
         </button>
       </div>
-      <img src="/public/p11.webp" alt="Kampanjbild" className="promo-img" loading="lazy" />
+      <img src={p11} alt="Kampanjbild" className="promo-img" loading="lazy" />
 
       {showPopup && <PopUp handleClosePopup={handleButtonClick} />}
     </div>

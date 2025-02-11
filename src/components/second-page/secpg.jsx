@@ -1,13 +1,13 @@
 import React from 'react';
 import './sec.css'; // يمكنك إنشاء ملف CSS منفصل للأنماط
-
+import r1 from './r1.webp';
 function Secpg() {
   return (
     <div className="ramnaslatt-page">
       {/* الجزء العلوي مع الصورة */}
       <div className="header-section">
         <img
-          src="URL_TO_YOUR_LOGO" // استبدل هذا برابط الشعار الفعلي
+          src={r1} // استبدل هذا برابط الشعار الفعلي
           alt="Ramnaslätt Bilvård Logo"
           className="logo"
         />

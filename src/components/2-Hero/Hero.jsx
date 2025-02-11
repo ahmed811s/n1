@@ -1,7 +1,7 @@
 import "./Hero.css";
 import { useState } from 'react';
 import PopUp from '../pop/PopupForm';
-
+import r1 from './r1.webp';
 const Hero = () => {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -43,7 +43,7 @@ const Hero = () => {
 
         <div className="hero-logo">
           <img
-            src="/public/r1.webp"
+            src={r1}
             alt="Ramnaslätt Bilvård Logo"
             loading="lazy"
           />
