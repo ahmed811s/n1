@@ -40,7 +40,8 @@
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
-  width: calc(107% - 20px);
+  width: calc(105% - 18px);
+  height: 35px;
   font-size: 14px;
   transition: background 0.3s ease;
 }

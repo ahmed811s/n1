@@ -67,7 +67,7 @@ p {
 
 .cta-button {
   position:   ;
-  background: linear-gradient(135deg, #00c6c6, #008b8b);
+  background: linear-gradient(135deg, rgb(46,230,196), rgb(16, 214, 145));
   color: white;
   font-size: 1.9rem;
   font-weight: bold;
@@ -93,5 +93,5 @@ p {
 
 .cta-button:hover {
   transform: translateY(-3px);
-  background: linear-gradient(135deg, #008b8b, #005f5f);
+  background: linear-gradient(135deg, rgb(46,230,196), rgb(16, 214, 145));
 }

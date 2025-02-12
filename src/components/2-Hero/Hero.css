@@ -26,7 +26,7 @@
   
  
   .hero-card-header {
-    background: linear-gradient(90deg,rgb(16,214,204), rgb(16,214,210));
+    background: linear-gradient(90deg,rgb(46,230,196), rgb(16, 214, 145));
     transition: 1s;
     animation: colorChange 0.8s infinite alternate;
     color: rgb(227,229,235);
@@ -69,7 +69,7 @@
   
   .hero-benefits ::before {
     content: "➤";
-    color: rgb(17,227,225);
+    color: rgb(46,230,196);
     font-size: 20px;
     margin-right: 10px;
   }
@@ -92,9 +92,9 @@
   
 
   @keyframes colorChange {
-    0% { background: #10D6CC; }
-    50% { background: #10D6CC; }
-    100% { background:#16eae0; }
+    0% { background: rgb(46,230,196); }
+    50% { background: rgb(46,230,196); }
+    100% { background:rgb(46,230,196); }
   }
   
   .hero-button:hover {
