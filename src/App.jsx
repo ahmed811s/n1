@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';import PopupForm from "./components/pop/PopupForm";
-import Header from './components/1-Header/Header';
-import Hero from './components/2-Hero/Hero';
-import Main from './components/3-main/Main';
-import Contact from './components/4-Contact/Contact';
-import About from './components/About/About';
-import Last from './components/Last/AnimatedHeader';
-import Secpg from './components/second-page/secpg';
+import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
+import PopupForm from "./components/pop/PopupForm";
+import { Link } from "react-router-dom";
+import Header from "./components/1-Header/Header";
+import Hero from "./components/2-Hero/Hero";
+import Main from "./components/3-main/Main";
+import Contact from "./components/4-Contact/Contact";
+import About from "./components/About/About";
+import Last from "./components/Last/AnimatedHeader";
+import Secpg from "./components/second-page/secpg";
 import Rooter from "./components/5-Footer/Footer";
 
 function App() {
@@ -22,27 +24,15 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
+  return(
+    <Routes>
+      <Route path="/" element={<Header/>}/>
+      <Route path="hero" element={<Hero/>}/>
 
-  return (
-    <div className='container'>
-      <Header />
-      <div className='divider' />
-      <Hero />
-      <div className='divider' />
-      <Main />
-      <div className='divider' />
-      <Contact />
-      <div className='divider' />
-      <About />
-      <div className='divider' />
-      <Last />
-      <div className='divider' />
-      <Rooter />
+      <Route path="secpg" element={<Secpg/>}/>
       
-      
-      {isPopupOpen && <PopupForm />} 
-    </div>
-  );
+    </Routes>
+  )
   
 }
 
