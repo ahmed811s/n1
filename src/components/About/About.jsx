@@ -52,7 +52,7 @@ const About = () => {
             <div className="f">
               <h3>{testimonial.name}</h3>
               <img
-                src={testimonial.source === "google" ? "./z1.webp" : "./z2.webp"}
+                src={testimonial.source === "google" ? "./gg.webp" : "./fb.webp"}
                 alt={testimonial.source}
                 className="source-icon"
               />

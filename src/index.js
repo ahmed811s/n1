@@ -8,19 +8,10 @@ import Secpg from './components/second-page/secpg';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  // <React.StrictMode>
-  //   <BrowserRouter>
-  //     <Routes>
-  //       <Route path="/" element={<App />} />
-  //       <Route path="/secpg" element={<Secpg />} />
-  //     </Routes>
-  //   </BrowserRouter>
-  // </React.StrictMode>
   <BrowserRouter>
     <Routes>
-      <Route path='/'  element={<App />}/>
-      <Route path='./secpg' element={<Secpg />}/>
+      <Route path="/" element={<App />} />
+      <Route path="/secpg" element={<Secpg />} />
     </Routes>
   </BrowserRouter>
-
 );

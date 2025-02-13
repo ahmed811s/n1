@@ -1,0 +1,97 @@
+.contact-container {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  line-height: 1.7em;
+  text-align: center;
+}
+
+
+.content {
+  text-align: center;
+}
+
+h2 {
+  font-size: 4rem; 
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.2rem !important;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.69;
+  color: #333;
+  padding: 0 2rem;
+}
+
+.col-P-dIA6eDDC {
+  width: 47.5%;
+}
+
+.c-column {
+  padding-left: 45px;
+  padding-right: 15px;
+  flex: 1 1 auto !important;
+  flex-grow: 1 !important;
+  flex-shrink: 1 !important;
+  flex-basis: auto !important;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.car-image {
+  width: 130%;
+  height:auto;
+  filter: blur(8px);
+}
+
+
+.cta-button {
+  position:   ;
+  background: linear-gradient(135deg, rgb(46,230,196), rgb(16, 214, 145));
+  color: white;
+  font-size: 1.9rem;
+  font-weight: bold;
+  width: 700px;
+  height: 80px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 198, 198, 0.4);
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.cta-button span {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-left: 8px;
+  opacity: 0.8;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, rgb(46,230,196), rgb(16, 214, 145));
+}

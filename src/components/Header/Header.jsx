@@ -1,6 +1,5 @@
 import React from "react";
 import TopBar from "./TopBar";
-
 import Logo from "./Logo";
 import Offer from "./Offer";
 import Promo from "./Promo";

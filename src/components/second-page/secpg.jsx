@@ -1,13 +1,15 @@
 import React from 'react';
 import './sec.css'; // يمكنك إنشاء ملف CSS منفصل للأنماط
-import r1 from './r1.webp';
+import lux from './r1.webp';
+
 function Secpg() {
   return (
+    
     <div className="ramnaslatt-page">
       {/* الجزء العلوي مع الصورة */}
       <div className="header-section">
-        <img
-          src={r1} // استبدل هذا برابط الشعار الفعلي
+      <img
+          src={lux} // استبدل هذا برابط الشعار الفعلي
           alt="Ramnaslätt Bilvård Logo"
           className="logo"
         />
@@ -22,12 +24,13 @@ function Secpg() {
       {/* جزء الخريطة ومعلومات الاتصال */}
       <div className="map-section">
         <h2>Hitta till oss</h2>
-        <p>Verkstadsgatan 2, 504 62 Borås</p>
+        <p className='mp'>Verkstadsgatan 2, 504 62 Borås</p>
         <img
-          src="https://pplx-res.cloudinary.com/image/upload/v1739279490/user_uploads/uKivdNZnIPCKJcJ/second.jpg" // استبدل هذا برابط الخريطة الفعلي
+          src="./gbs.webp"
           alt="Map of Verkstadsgatan 2, Borås"
           className="map-image"
         />
+        
       </div>
 
       {/* الحقوق */}

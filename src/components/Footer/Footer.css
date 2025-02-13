@@ -1,0 +1,48 @@
+.G {
+    width: 100%;
+    display: flex;
+    padding-left: 40px;
+    justify-content: space-around;
+}
+
+.H {
+    margin-top: 60px;
+        
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: rgb(48,183,236);
+    font-size: 1.1rem;
+    transform: 0.2s;
+}
+
+a:hover{
+    text-decoration: none;
+    opacity: 0.9;
+    color: rgb(48,183,236);
+    font-size: 1.2rem;
+}
+
+
+.T {
+    text-align: center;
+    
+}
+.gb {
+    width: 600px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position:relative;
+    right: 90px;
+    
+    
+}
+
+.H .loc{
+    padding-top: 12px;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
