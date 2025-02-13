@@ -24,32 +24,27 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
-  return(
-    <Routes>
-      <Route
-            path="/"
-            element={
-              <>
-                <Header />
-                <div className="divider" />
-                <Hero />
-                <div className="divider" />
-                <Main />
-                <div className="divider" />
-                <Contact />
-                <div className="divider" />
-                <About />
-                <div className="divider" />
-                <Last />
-                <div className="divider" />
-                <Rooter />
-                {isPopupOpen && <PopupForm />}
-              </>
-            }
-          />
-      <Route path="/secpg" element={<Secpg/>}/>
-    </Routes>
-  )
+
+  return (
+    <div className='container'>
+      <Header />
+      <div className='divider' />
+      <Hero />
+      <div className='divider' />
+      <Main />
+      <div className='divider' />
+      <Contact />
+      <div className='divider' />
+      <About />
+      <div className='divider' />
+      <Last />
+      <div className='divider' />
+      <Rooter />
+      
+      
+      {isPopupOpen && <PopupForm />} 
+    </div>
+  );
   
 }
 
