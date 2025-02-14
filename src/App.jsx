@@ -20,7 +20,7 @@ function App() {
     const timer = setTimeout(() => {
       setIsPopupOpen(true);
       console.log("✅ النافذة المنبثقة مفتوحة الآن!");
-    }, 100); // 5000 ميلي ثانية تعادل 5 ثواني
+    }, 100);
 
     return () => clearTimeout(timer);
   }, []);
